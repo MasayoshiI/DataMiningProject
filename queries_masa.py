@@ -14,7 +14,7 @@ cursor = db.cursor()
 
 LU_LIST = ["A", "E", "AH", "EA", "C", "I", "CC", "R1", "CD", "R2", "CL", "R3", "CM", "R4", "R4", "RC", "CP", "RL"]
 YR_BUILT_LIST = [(float('-inf'), 18.5), (18.5, 54.5), (54.5, 79.5), (79.5, 98.5), (98.5, 104.5), (104.5, 113.5), (113.5, 118.5),(118.5, 119.5), (119.5, 129.5), (129.5, float('inf'))]
-LAND_SF_LIST = [(float('-inf'),211148788.5),(211148788.5, 422277612),(422277612,633406435.5),(633406435.5, 844535259), (844535259, 1055664082.5), (1055664082.5,1266792906), (1266792906,1477921729.5), (1477921729.5,1689050553),(1689050553,1900179376.5),(1900179376.5,float('inf'))]
+LAND_SF_LIST = [(float('-inf'),662.5), (662.5,849.5), (849.5,1072.5), (1072.5,1370.5), (1370.5, 1983.5), (1983.5, 3182.5), (3182.5, 4262.5), (4262.5, 5342.5), (5342.5,7421), (7421, float('inf'))]
 OCC_LIST = ["Y", "N"]
 
 # Average num_floors for each LU
@@ -35,9 +35,10 @@ y_pos = np.arange(len(x))
 plt.figure(figsize=(10,5))
 plt.bar(y_pos, y, align='center', alpha=0.5)
 plt.xticks(y_pos, x)
-plt.ylabel('Usage')
+plt.ylabel('Num of Floors')
 plt.title('Average Number of Floors')
 plt.show()
+
 
 
 # Average value for year built
@@ -58,7 +59,7 @@ y_pos = np.arange(len(x))
 plt.figure(figsize=(10,5))
 plt.bar(y_pos, y, align='center', alpha=0.5)
 plt.xticks(y_pos, x)
-plt.ylabel('Usage')
+plt.ylabel('Value')
 plt.title('Average Value for Year Built')
 
 plt.show()
@@ -83,7 +84,7 @@ y_pos = np.arange(len(x))
 plt.figure(figsize=(10,5))
 plt.bar(y_pos, y, align='center', alpha=0.5)
 plt.xticks(y_pos, x)
-plt.ylabel('Usage')
+plt.ylabel('Value')
 plt.title('Average Value for SQ Feet')
 
 plt.show()
@@ -105,7 +106,7 @@ y_pos = np.arange(len(x))
 plt.figure(figsize=(10,5))
 plt.bar(y_pos, y, align='center', alpha=0.5)
 plt.xticks(y_pos, x)
-plt.ylabel('Usage')
+plt.ylabel('Value')
 plt.title('Average Value for Owned OCC')
 
 plt.show()
